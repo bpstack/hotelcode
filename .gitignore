@@ -4,6 +4,8 @@
 plan-private.md
 prompts.md
 CLAUDE.md
+.agents/
+skills-lock.json
 
 # =====================
 # Environment variables
