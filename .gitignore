@@ -1,0 +1,87 @@
+# =====================
+# Project private files
+# =====================
+plan-private.md
+prompts.md
+CLAUDE.md
+
+# =====================
+# Environment variables
+# =====================
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+
+# =====================
+# Dependencies
+# =====================
+node_modules/
+.pnpm-store/
+
+# =====================
+# Astro build output
+# =====================
+dist/
+.astro/
+
+# =====================
+# Vercel
+# =====================
+.vercel/
+
+# =====================
+# OS files
+# =====================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# =====================
+# IDE / Editor
+# =====================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# =====================
+# Logs
+# =====================
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================
+# Runtime / Cache
+# =====================
+*.tsbuildinfo
+.cache/
+.parcel-cache/
+.turbo/
+
+# =====================
+# Testing
+# =====================
+coverage/
+playwright-report/
+test-results/
+
+# =====================
+# Misc
+# =====================
+*.bak
+*.tmp
+*.temp
+*.orig
+.claude/
