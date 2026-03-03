@@ -19,7 +19,7 @@
 | Package manager | **pnpm** | Rápido, eficiente en disco |
 | Node.js | **v22.16.0** | Compatible con Astro 5.x y futuro Astro 6 |
 | Deploy | **Vercel** | Fácil configuración de subdominios |
-| Idioma | **Español + Inglés (i18n)** | Empezar en español, añadir inglés después |
+| Idioma | **Español** | Enfoque SEO en mercado hispanohablante. Inglés se evaluará más adelante |
 | Repo | **Público** en GitHub | Transparencia, SEO, credibilidad |
 | Backend | **No** | Contenido estático, sin necesidad de servidor. Servicios externos (Buttondown, Mailchimp) para newsletter si se necesita |
 | Auth/Login | **No** | No hay contenido privado ni dashboard. Se puede añadir con Hybrid + servicio auth (Clerk, Auth.js) si se necesita en el futuro |
@@ -32,6 +32,7 @@
 | Fuentes | **Poppins** via `@fontsource/poppins` (self-hosted, pesos 400/600/700) | Sin requests externos a Google Fonts |
 | robots.txt | **Sí** | Controlar indexación |
 | Página 404 | **src/pages/404.astro** | Soporte nativo de Astro |
+| Dark mode | **Class-based** (`.dark` en `<html>`) | Toggle + localStorage + prefers-color-scheme. Paleta zinc (negros reales) |
 
 ### Notas sobre Tailwind v4 + Astro
 - Usar `@reference` cuando se use `@apply` dentro de `<style>` en componentes `.astro`
@@ -66,7 +67,7 @@
    - De Excel a app: sistema de horarios con validación automática
    - Constraints y reglas (descansos, rotaciones, vacaciones)
 
-2. **Recepción / Front Desk**
+2. **Recepción / Front Det**
    - Logbook digital: centralizar comunicación entre turnos
    - Check-in/check-out: flujos automatizados
    - Gestión de incidencias
@@ -110,16 +111,9 @@ hotelcode/
 ├── src/
 │   ├── components/       # Componentes reutilizables
 │   ├── content/          # Markdown/MDX para blog posts
-│   │   ├── blog/
-│   │   │   ├── es/       # Posts en español
-│   │   │   └── en/       # Posts en inglés
+│   │   └── blog/         # Posts en español
 │   ├── layouts/          # Layout base, blog layout
-│   ├── pages/
-│   │   ├── es/           # Páginas en español
-│   │   └── en/           # Páginas en inglés
-│   ├── i18n/             # Traducciones y utilidades i18n
-│   │   ├── es.json
-│   │   └── en.json
+│   ├── pages/            # Páginas en español
 │   └── styles/           # Estilos globales (Tailwind v4 via Vite plugin)
 └── .env                  # SITE_URL, etc. (nunca hardcodear)
 ```
@@ -136,20 +130,21 @@ hotelcode/
 ## Próximos Pasos
 
 1. [x] Inicializar proyecto Astro 5.x con pnpm
-2. [ ] Configurar Tailwind CSS v4.2 (Vite plugin) + i18n básico
+2. [x] Configurar Tailwind CSS v4.2 (Vite plugin)
 3. [ ] Configurar SEO base: Open Graph, sitemap, RSS, robots.txt, 404
 4. [x] Instalar fuentes con @fontsource (Poppins 400/600/700)
-5. [ ] Configurar analytics (elegir: Plausible / Umami / Vercel Analytics)
-6. [ ] Crear landing page MVP (español, responsive)
-7. [ ] Configurar deploy en Vercel con subdominio `hotelcode.stackbp.es`
-8. [ ] Primer artículo del blog
-9. [ ] Crear canal de YouTube "HotelCode"
-10. [ ] Primer vídeo: introducción al proyecto
+5. [x] Dark mode (toggle + localStorage + prefers-color-scheme, paleta zinc negros reales)
+6. [x] Crear landing page MVP (español, responsive, dark mode)
+7. [ ] Configurar analytics (elegir: Plausible / Umami / Vercel Analytics)
+8. [ ] Configurar deploy en Vercel con subdominio `hotelcode.stackbp.es`
+9. [ ] Primer artículo del blog
+10. [ ] Crear canal de YouTube "HotelCode"
+11. [ ] Primer vídeo: introducción al proyecto
 
 ---
 
 ## Notas
 
-- El idioma principal del sitio es **español**, inglés se añade en fase 2
+- El idioma del sitio es **español** — enfoque SEO en mercado hispanohablante. Inglés se evaluará más adelante
 - Four Points es el proyecto técnico de referencia y caso de estudio principal
 - Sin backend ni login — si se necesita funcionalidad dinámica, se evalúa migrar a modo Hybrid + servicios externos
