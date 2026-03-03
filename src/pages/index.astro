@@ -1,16 +1,23 @@
 ---
-import '../styles/global.css';
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ProjectIntro from '../components/ProjectIntro.astro';
+import Modules from '../components/Modules.astro';
+import TechStack from '../components/TechStack.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>HotelCode</title>
-	</head>
-	<body class="min-h-screen bg-gray-50 flex items-center justify-center">
-		<h1 class="text-4xl font-bold text-gray-900">HotelCode</h1>
-	</body>
-</html>
+<Base
+  title="HotelCode — Automatizando operaciones hoteleras con codigo e IA"
+  description="De hotelero a developer: documentando la construccion de Four Points, un PMS completo con +14 modulos para gestionar un hotel real."
+>
+  <Navbar />
+  <Hero />
+  <ProjectIntro />
+  <Modules />
+  <TechStack />
+  <AboutMe />
+  <Footer />
+</Base>
