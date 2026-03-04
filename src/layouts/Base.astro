@@ -46,5 +46,63 @@ const siteUrl = import.meta.env.SITE || 'https://hotelcode.stackbp.es';
   </head>
   <body class="font-sans antialiased text-surface-800 bg-white dark:text-dark-text dark:bg-dark-bg transition-colors duration-300">
     <slot />
+
+    <!-- Scroll reveal animations -->
+    <script is:inline>
+      function initRevealObserver() {
+        var reveals = document.querySelectorAll('.reveal');
+        if (!reveals.length) return;
+
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        reveals.forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initRevealObserver);
+      } else {
+        initRevealObserver();
+      }
+      document.addEventListener('astro:after-swap', initRevealObserver);
+    </script>
+
+    <!-- Mouse-tracking glow effect on [data-glow] cards -->
+    <script is:inline>
+      function initGlowTracking() {
+        var cards = document.querySelectorAll('[data-glow]');
+        cards.forEach(function(card) {
+          card.addEventListener('mousemove', function(e) {
+            var rect = card.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            card.style.setProperty('--glow-x', x + 'px');
+            card.style.setProperty('--glow-y', y + 'px');
+          });
+          card.addEventListener('mouseleave', function() {
+            card.style.setProperty('--glow-x', '50%');
+            card.style.setProperty('--glow-y', '50%');
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGlowTracking);
+      } else {
+        initGlowTracking();
+      }
+      document.addEventListener('astro:after-swap', initGlowTracking);
+    </script>
   </body>
 </html>

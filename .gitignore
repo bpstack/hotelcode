@@ -87,3 +87,12 @@ test-results/
 *.temp
 *.orig
 .claude/
+
+# Python (residuo de herramientas externas)
+.venv/
+__pycache__/
+
+# Screenshots
+*.png
+*.jpg
+*.jpeg

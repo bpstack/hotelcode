@@ -1,73 +1,193 @@
 ---
 ---
 
-<section class="relative min-h-screen flex items-center overflow-hidden pt-16">
-  <!-- Background pattern -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-brand-50)_0%,_transparent_50%)] dark:bg-[radial-gradient(ellipse_at_top_right,_var(--color-dark-layer1)_0%,_transparent_50%)]"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--color-brand-50)_0%,_transparent_40%)] dark:bg-[radial-gradient(ellipse_at_bottom_left,_var(--color-dark-layer1)_0%,_transparent_40%)]"></div>
+<section class="relative min-h-screen flex items-center overflow-hidden pt-24">
+  <!-- Ambient background -->
+  <div class="absolute inset-0">
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-400/10 dark:bg-brand-500/5 rounded-full blur-[120px] animate-pulse-glow"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-400/8 dark:bg-accent-400/3 rounded-full blur-[100px] animate-pulse-glow" style="animation-delay: 1.5s"></div>
+    <div class="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-brand-600/5 dark:bg-brand-400/3 rounded-full blur-[80px] animate-float"></div>
+  </div>
 
-  <!-- Grid pattern overlay -->
-  <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h60v60H0z&quot; fill=&quot;none&quot; stroke=&quot;%23fff&quot; stroke-width=&quot;0.5&quot;/%3E%3C/svg%3E');"></div>
+  <!-- Grid dot pattern -->
+  <div class="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]" style="background-image: radial-gradient(circle, currentColor 1px, transparent 1px); background-size: 32px 32px;"></div>
 
-  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-    <div class="max-w-3xl">
-      <!-- Tagline — corner-bracket marker -->
-      <div class="relative inline-flex items-center px-5 py-2 group cursor-default select-none mb-8">
-        <span class="absolute top-0 left-0 block w-3 h-3 border-t-[1.5px] border-l-[1.5px] border-brand-500/70 transition-all duration-500 group-hover:w-4 group-hover:h-4"></span>
-        <span class="absolute bottom-0 right-0 block w-3 h-3 border-b-[1.5px] border-r-[1.5px] border-brand-500/70 transition-all duration-500 group-hover:w-4 group-hover:h-4"></span>
-        <span class="text-[11px] tracking-[0.4em] uppercase font-semibold text-surface-400 dark:text-dark-text3 group-hover:text-surface-600 dark:group-hover:text-dark-text2 transition-colors duration-500">
-          Automatización&nbsp;
-        </span>
-        <span class="text-[11px] tracking-[0.4em] uppercase font-semibold text-brand-600 dark:text-brand-400 group-hover:text-brand-500 transition-colors duration-500">
-          hotelera
-        </span>
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- Terminal status badge -->
+      <div class="inline-block mb-8 animate-fade-up">
+        <div class="font-mono text-[13px] leading-relaxed px-5 py-3 rounded-xl bg-surface-100 dark:bg-dark-layer2 border border-surface-200 dark:border-dark-border shadow-lg shadow-surface-900/10 dark:shadow-black/20 text-left">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="text-surface-400 dark:text-dark-text3">$</span>
+            <span class="text-brand-600 dark:text-brand-400">four-points</span>
+            <span class="text-surface-500 dark:text-dark-text3">status</span>
+            <span class="inline-block w-1.5 h-4 bg-brand-500 dark:bg-brand-400 animate-pulse ml-0.5"></span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-green-600 dark:text-green-400">→</span>
+            <span class="text-surface-600 dark:text-dark-text2">14 módulos</span>
+            <span class="text-surface-300 dark:text-dark-text3">·</span>
+            <span class="text-surface-600 dark:text-dark-text2">40+ tablas</span>
+            <span class="text-surface-300 dark:text-dark-text3">·</span>
+            <span class="text-green-600 dark:text-green-400">producción ✓</span>
+          </div>
+        </div>
       </div>
 
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-surface-900 dark:text-dark-text">
-        De Front Office a developer:
-        <span class="block mt-2 bg-gradient-to-r from-brand-600 to-brand-800 dark:from-brand-400 dark:to-brand-200 bg-clip-text text-transparent">
+      <!-- Main title -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-surface-900 dark:text-dark-text animate-fade-up" style="animation-delay: 0.1s">
+        De Front Office <br class="hidden sm:block" />a developer:
+        <span class="block mt-2 sm:mt-3 bg-gradient-to-r from-brand-500 via-brand-600 to-brand-800 dark:from-brand-300 dark:via-brand-400 dark:to-brand-200 bg-clip-text text-transparent">
           automatizando un hotel real
         </span>
       </h1>
 
-      <p class="mt-6 text-lg sm:text-xl text-surface-500 dark:text-dark-text2 leading-relaxed max-w-2xl">
-        Construí <strong class="text-surface-700 dark:text-dark-text">Four Points</strong>, un sistema de gestión hotelera completo con +14 módulos.
-        Aquí documento todo el proceso: las decisiones, los errores y el código.
+      <!-- Subtitle -->
+      <p class="mt-6 sm:mt-8 text-lg sm:text-xl text-surface-500 dark:text-dark-text2 leading-relaxed max-w-2xl mx-auto animate-fade-up" style="animation-delay: 0.2s">
+        Construí <strong class="text-surface-700 dark:text-dark-text">Four Points</strong>, un PMS completo
+        con +14 módulos para gestionar un hotel real. Aquí documento todo el proceso.
       </p>
 
-      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-fade-up" style="animation-delay: 0.3s">
         <a
           href="https://four-points.stackbp.es"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-white bg-brand-600 rounded-xl hover:bg-brand-700 shadow-lg shadow-brand-600/20 hover:shadow-brand-600/30 transition-all hover:-translate-y-0.5"
+          class="btn-shine group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-700 rounded-2xl hover:from-brand-500 hover:to-brand-600 shadow-xl shadow-brand-600/20 hover:shadow-brand-500/30 transition-all duration-300 hover:-translate-y-0.5"
         >
           Explorar Four Points
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </a>
         <a
           href="#proyecto"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-semibold text-surface-700 dark:text-dark-text bg-surface-100 dark:bg-dark-layer2 rounded-xl hover:bg-surface-200 dark:hover:bg-dark-layer3 transition-all"
+          class="group inline-flex items-center justify-center gap-2 px-7 py-3.5 text-base font-semibold text-surface-700 dark:text-brand-200 bg-surface-100 dark:bg-brand-950/60 border border-surface-300 dark:border-brand-600/40 rounded-2xl hover:bg-surface-200 dark:hover:bg-brand-900/60 hover:border-surface-400 dark:hover:border-brand-500/60 shadow-md shadow-surface-900/5 dark:shadow-brand-900/20 transition-all duration-300 hover:-translate-y-0.5"
         >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brand-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
           Conocer el proyecto
         </a>
       </div>
+    </div>
 
-      <!-- Stats -->
-      <div class="mt-16 grid grid-cols-3 gap-8 max-w-md">
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-surface-900 dark:text-dark-text">+14</div>
-          <div class="text-sm text-surface-400 dark:text-dark-text3 mt-1">Módulos</div>
+    <!-- Product mockup card -->
+    <div class="mt-16 sm:mt-20 relative animate-fade-up" style="animation-delay: 0.5s">
+      <div data-glow class="relative mx-auto max-w-4xl rounded-2xl sm:rounded-3xl border border-surface-200/80 dark:border-dark-border/80 bg-white/60 dark:bg-dark-layer1/60 backdrop-blur-sm shadow-2xl shadow-surface-900/[0.08] dark:shadow-black/30 overflow-hidden">
+        <!-- Browser chrome bar -->
+        <div class="flex items-center gap-2 px-4 py-3 border-b border-surface-200/60 dark:border-dark-border/60 bg-surface-50/80 dark:bg-dark-layer2/80">
+          <div class="flex gap-1.5">
+            <div class="w-3 h-3 rounded-full bg-red-400/80"></div>
+            <div class="w-3 h-3 rounded-full bg-amber-400/80"></div>
+            <div class="w-3 h-3 rounded-full bg-green-400/80"></div>
+          </div>
+          <div class="flex-1 flex justify-center">
+            <div class="px-4 py-1 rounded-lg bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 text-xs text-surface-400 dark:text-dark-text3 font-mono">
+              four-points.stackbp.es
+            </div>
+          </div>
+          <div class="w-12"></div>
         </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-surface-900 dark:text-dark-text">+40</div>
-          <div class="text-sm text-surface-400 dark:text-dark-text3 mt-1">Tablas DB</div>
+
+        <!-- Dashboard preview content -->
+        <div class="p-4 sm:p-6 bg-gradient-to-b from-surface-50 to-white dark:from-dark-layer1 dark:to-dark-bg">
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-4">
+            <div class="p-3 sm:p-4 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm">
+              <div class="text-xs text-surface-400 dark:text-dark-text3 mb-1">Ocupación</div>
+              <div class="text-lg sm:text-xl font-bold text-surface-900 dark:text-dark-text">87%</div>
+              <div class="text-xs text-green-500 font-semibold mt-0.5">↑ 12%</div>
+            </div>
+            <div class="p-3 sm:p-4 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm">
+              <div class="text-xs text-surface-400 dark:text-dark-text3 mb-1">Check-ins hoy</div>
+              <div class="text-lg sm:text-xl font-bold text-surface-900 dark:text-dark-text">24</div>
+              <div class="text-xs text-brand-500 font-semibold mt-0.5">en curso</div>
+            </div>
+            <div class="p-3 sm:p-4 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm">
+              <div class="text-xs text-surface-400 dark:text-dark-text3 mb-1">Mantenimiento</div>
+              <div class="text-lg sm:text-xl font-bold text-surface-900 dark:text-dark-text">3</div>
+              <div class="text-xs text-amber-500 font-semibold mt-0.5">pendientes</div>
+            </div>
+            <div class="p-3 sm:p-4 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm">
+              <div class="text-xs text-surface-400 dark:text-dark-text3 mb-1">Revenue</div>
+              <div class="text-lg sm:text-xl font-bold text-surface-900 dark:text-dark-text">€4.2k</div>
+              <div class="text-xs text-green-500 font-semibold mt-0.5">↑ 8%</div>
+            </div>
+          </div>
+
+          <!-- Chart placeholder rows -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+            <div class="sm:col-span-2 h-28 sm:h-36 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm p-4 flex flex-col justify-end">
+              <div class="flex items-end gap-1.5 h-full">
+                {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95].map((h) => (
+                  <div class="flex-1 rounded-sm bg-gradient-to-t from-brand-500 to-brand-400 dark:from-brand-600 dark:to-brand-400 opacity-70" style={`height: ${h}%`}></div>
+                ))}
+              </div>
+            </div>
+            <div class="h-28 sm:h-36 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-sm p-4 flex items-center justify-center">
+              <div class="w-20 h-20 rounded-full border-[6px] border-brand-500/30 dark:border-brand-400/30 relative">
+                <div class="absolute inset-0 rounded-full border-[6px] border-transparent border-t-brand-500 dark:border-t-brand-400" style="transform: rotate(310deg)"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <span class="text-sm font-bold text-surface-900 dark:text-dark-text">87%</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-surface-900 dark:text-dark-text">Full</div>
-          <div class="text-sm text-surface-400 dark:text-dark-text3 mt-1">Stack</div>
+      </div>
+
+      <!-- Decorative floating elements -->
+      <div class="hidden lg:block absolute -left-8 top-1/3 animate-float" style="animation-delay: 1s">
+        <div class="p-3 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-lg">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-green-100 dark:bg-green-900/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <div class="text-xs font-semibold text-surface-900 dark:text-dark-text">Check-in</div>
+              <div class="text-[10px] text-surface-400 dark:text-dark-text3">Hab. 301</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden lg:block absolute -right-4 bottom-1/4 animate-float" style="animation-delay: 2.5s">
+        <div class="p-3 rounded-xl bg-white dark:bg-dark-layer2 border border-surface-200/60 dark:border-dark-border/60 shadow-lg">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-brand-100 dark:bg-brand-900/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-brand-600 dark:text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs font-semibold text-surface-900 dark:text-dark-text">+14 módulos</div>
+              <div class="text-[10px] text-surface-400 dark:text-dark-text3">integrados</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust marquee -->
+    <div class="mt-16 sm:mt-20 animate-fade-up" style="animation-delay: 0.6s">
+      <p class="text-center text-xs font-semibold tracking-widest uppercase text-surface-500 dark:text-dark-text2 mb-6">
+        Tecnologías que potencian Four Points
+      </p>
+      <div class="relative overflow-hidden">
+        <!-- Fade edges -->
+        <div class="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-white dark:from-dark-bg to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-white dark:from-dark-bg to-transparent z-10 pointer-events-none"></div>
+
+        <div class="marquee-track">
+          <!-- Duplicate for seamless loop -->
+          {[...Array(2)].map(() => (
+            <div class="flex items-center gap-8 sm:gap-12 px-4 sm:px-6 shrink-0">
+              {['Next.js', 'React', 'TypeScript', 'Tailwind', 'Express', 'MySQL', 'Zustand', 'Zod', 'Cloudinary', 'Vercel'].map((tech) => (
+                <span class="text-sm sm:text-base font-semibold text-surface-500 dark:text-dark-text2 whitespace-nowrap hover:text-surface-800 dark:hover:text-dark-text transition-colors cursor-default select-none">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>
