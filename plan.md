@@ -32,7 +32,7 @@
 | Fuentes | **Poppins** via `@fontsource/poppins` (self-hosted, pesos 400/600/700) | Sin requests externos a Google Fonts |
 | robots.txt | **Sí** | Controlar indexación |
 | Página 404 | **src/pages/404.astro** | Soporte nativo de Astro |
-| Dark mode | **Class-based** (`.dark` en `<html>`) | Toggle + localStorage + prefers-color-scheme. Paleta zinc (negros reales) |
+| Dark mode | **Class-based** (`.dark` en `<html>`) | Toggle + localStorage + prefers-color-scheme. Paleta zinc con tinte azul frío + fondo violeta en Hero/Footer |
 
 ### Notas sobre Tailwind v4 + Astro
 - Usar `@reference` cuando se use `@apply` dentro de `<style>` en componentes `.astro`
@@ -51,6 +51,7 @@
 - **Embeds de YouTube**: Tutoriales integrados en artículos
 - **Categorías de contenido** (ver Roadmap de Contenido)
 - **Página de canal/vídeos**: Listado de tutoriales organizados
+- **Páginas de módulos**: Cada card de la sección Módulos enlaza a su propia página con vídeos explicativos. Estilo visual más arriesgado (colores vivos por módulo)
 
 ### Fase 3 — Expansión
 - **Demo interactiva**: Enlace directo a Four Points como demo live
@@ -131,15 +132,20 @@ hotelcode/
 
 1. [x] Inicializar proyecto Astro 5.x con pnpm
 2. [x] Configurar Tailwind CSS v4.2 (Vite plugin)
-3. [ ] Configurar SEO base: Open Graph, sitemap, RSS, robots.txt, 404
+3. [x] Configurar SEO base: Open Graph, sitemap, RSS, robots.txt, 404
 4. [x] Instalar fuentes con @fontsource (Poppins 400/600/700)
-5. [x] Dark mode (toggle + localStorage + prefers-color-scheme, paleta zinc negros reales)
+5. [x] Dark mode (toggle + localStorage + prefers-color-scheme, paleta zinc con tinte frío)
 6. [x] Crear landing page MVP (español, responsive, dark mode)
-7. [ ] Configurar analytics (elegir: Plausible / Umami / Vercel Analytics)
-8. [ ] Configurar deploy en Vercel con subdominio `hotelcode.stackbp.es`
-9. [ ] Primer artículo del blog
-10. [ ] Crear canal de YouTube "HotelCode"
-11. [ ] Primer vídeo: introducción al proyecto
+7. [x] Landing page visual overhaul: hover effects, mouse glow, btn-shine, color system indigo/violet
+8. [x] Logo hexagonal SVG con HC + hover underline trace
+9. [x] Favicon.svg actualizado con logo propio
+10. [ ] Generar favicon pack completo en realfavicongenerator.net
+11. [ ] Configurar analytics (elegir: Plausible / Umami / Vercel Analytics)
+12. [ ] Configurar deploy en Vercel con subdominio `hotelcode.stackbp.es`
+13. [ ] Crear páginas internas de módulos `src/pages/modulos/[slug].astro`
+14. [ ] Primer artículo del blog
+15. [ ] Crear canal de YouTube "HotelCode"
+16. [ ] Primer vídeo: introducción al proyecto
 
 ---
 

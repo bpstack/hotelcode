@@ -1,0 +1,27 @@
+<svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c4b5fd"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer hexagon -->
+  <path d="M19 2 L33.5 10.5 L33.5 27.5 L19 36 L4.5 27.5 L4.5 10.5 Z" fill="url(#bg)"/>
+
+  <!-- Inner lighter hexagon stroke -->
+  <path d="M19 5.5 L30.5 12 L30.5 25 L19 31.5 L7.5 25 L7.5 12 Z" fill="none" stroke="url(#shine)" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Top-right corner dot accent -->
+  <circle cx="30" cy="9" r="2" fill="#c4b5fd" opacity="0.7"/>
+
+  <!-- HC text -->
+  <text x="19" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="-0.5">HC</text>
+
+  <!-- Bottom line accent -->
+  <line x1="13" y1="27" x2="25" y2="27" stroke="#c4b5fd" stroke-width="1" opacity="0.4" stroke-linecap="round"/>
+</svg>

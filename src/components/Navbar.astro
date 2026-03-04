@@ -6,14 +6,42 @@ import ThemeToggle from './ThemeToggle.astro';
   <div class="max-w-5xl mx-auto px-4">
     <div class="flex items-center justify-between h-14 px-4 sm:px-6 rounded-2xl bg-white/70 dark:bg-dark-layer1/70 backdrop-blur-xl border border-surface-200/50 dark:border-dark-border/50 shadow-lg shadow-surface-900/[0.03] dark:shadow-black/20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group shrink-0">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-md shadow-brand-500/20">
-          <span class="text-white text-xs font-bold">HC</span>
-        </div>
+      <a href="/" class="flex items-center gap-2 group shrink-0 px-2 py-1 rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg w-9 h-9 shrink-0">
+          <defs>
+            <linearGradient id="logobg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#4338ca"/>
+              <stop offset="100%" stop-color="#7c3aed"/>
+            </linearGradient>
+          </defs>
+          <!-- Hexagon fill -->
+          <path d="M19 2 L33.5 10.5 L33.5 27.5 L19 36 L4.5 27.5 L4.5 10.5 Z" fill="url(#logobg)"/>
+          <!-- HC text -->
+          <text x="19" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="-0.5">HC</text>
+          <!-- Underline trace -->
+          <line class="logo-trace" x1="13" y1="27" x2="25" y2="27" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
         <span class="text-lg font-bold text-surface-900 dark:text-dark-text hidden sm:block">
           Hotel<span class="text-brand-600 dark:text-brand-400">Code</span>
         </span>
       </a>
+
+      <style>
+        .logo-trace {
+          stroke-dasharray: 12;
+          stroke-dashoffset: 12;
+          transition: stroke-dashoffset 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        a:hover .logo-trace {
+          stroke-dashoffset: 0;
+        }
+        .logo-svg {
+          transition: filter 0.4s ease;
+        }
+        a:hover .logo-svg {
+          filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));
+        }
+      </style>
 
       <!-- Nav links — pill style -->
       <div class="hidden md:flex items-center gap-1 text-sm font-semibold">
